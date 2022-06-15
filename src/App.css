@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+
+body {
+  background-color: rgb(1, 22, 44);
+  margin: 6rem 10rem;
+}
+
+.wrapper {
+  border: 2px solid rgba(248, 235, 49, 0.44);
+  position: relative;
+  background-color: rgb(17, 19, 19);
+  width: 19.7rem;
+  min-height: 70vh;
+  margin: auto;
+  display: grid;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  column-gap: 6px;
+  row-gap: 15px;
+  border-radius: 50px;
+  backdrop-filter: blur(12px);
+  /* backdrop filter has minimal browser support */
+  grid-template-areas:
+    "display display display display"
+    "ac pdm percent divide"
+    "box7 box8 box9 boxX"
+    "box4 box5 box6 minus"
+    "box1 box2 box3 plus"
+    "zero zero dot equals";
+}
+
+.display {
+  height: 5rem;
+  position: relative;
+  top: 10px;
+  border-radius: 15px;
+  border: 0;
+  text-align: right;
+  background-color: rgb(17, 19, 19);
+  color: white;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 1); */
+}
+
+.box {
+  height: 3.5rem;
+  width: 3.5rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: rgba(90, 89, 89, 0.991);
+  color: white;
+  box-shadow: -2px 2px 2px 3px rgba(255, 255, 255, 1);
+  transition: transform 0.2s;
+}
+
+.box:hover {
+  position: relative;
+  opacity: 0.7;
+  cursor: pointer;
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.box-AC {
+  grid-area: ac;
+  background-color: rgba(239, 239, 239, 0.601);
+}
+.pdm {
+  grid-area: pdm;
+  background-color: rgba(239, 239, 239, 0.601);
+}
+.box-percent {
+  grid-area: percent;
+  background-color: rgba(239, 239, 239, 0.601);
+}
+.box-divide {
+  grid-area: divide;
+  background-color: orange;
+}
+.box-7 {
+  grid-area: box7;
+}
+.box-8 {
+  grid-area: box8;
+}
+.box-9 {
+  grid-area: box9;
+}
+.box-x {
+  grid-area: boxX;
+  background-color: orange;
+}
+.box-4 {
+  grid-area: box4;
+}
+.box-5 {
+  grid-area: box5;
+}
+.box-6 {
+  grid-area: box6;
+}
+.box-minus {
+  grid-area: minus;
+  background-color: orange;
+}
+.box-1 {
+  grid-area: box1;
+}
+.box-2 {
+  grid-area: box2;
+}
+.box-3 {
+  grid-area: box3;
+}
+.box-plus {
+  grid-area: plus;
+  background-color: orange;
+}
+.box-zero {
+  grid-area: zero;
+  width: 95%;
+  border-radius: 35px;
+}
+.box-dot {
+  grid-area: dot;
+}
+.box-equals {
+  grid-area: equals;
+  background-color: orange;
+}
+
+.display {
+  grid-area: display;
+}
+.prank {
+  animation: bounce 1s ease-out;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(20px);
+    transform: translateX(10px);
+    color: red;
+  }
+  50% {
+    transform: translateY(-10px);
+    transform: translateX(5px);
+    color: red;
+  }
+  100% {
+    transform: translateY(0);
+    transform: translateY(0);
+    color: red;
+  }
+}
